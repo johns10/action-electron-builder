@@ -120,7 +120,7 @@ const runAction = () => {
 			// https://github.com/yarnpkg/yarn/issues/6894
 			const pkgJson = JSON.parse(readFileSync(pkgJsonPath, "utf8"));
 			if (pkgJson.scripts && pkgJson.scripts[buildScriptName]) {
-				run(`yarn run ${buildScriptName}`, pkgRoot);
+				run(`yarn run ${buildScriptName}`, '.');
 			}
 		}
 	}
