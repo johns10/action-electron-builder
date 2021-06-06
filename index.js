@@ -114,7 +114,7 @@ const runAction = () => {
 	} else {
 		log("Running the build script…");
 		if (useNpm) {
-			run(`npm run ${buildScriptName} --if-present`, pkgRoot);
+			run(`npm run ${buildScriptName} --if-present`, '.');
 		} else {
 			// TODO: Use `yarn run ${buildScriptName} --if-present` once supported
 			// https://github.com/yarnpkg/yarn/issues/6894
